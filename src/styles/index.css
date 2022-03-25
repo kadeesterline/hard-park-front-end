@@ -1,0 +1,105 @@
+body {
+  background-color: lightgray;
+  margin:0;
+  padding:0;
+
+}
+
+.navbar-custom {
+  height: 75px;
+}
+
+#nav-title {
+  color: white;
+  font-size: 70px;
+  
+}
+
+#home-link, #add-link, #gallery-link {
+  color: white;
+  font-size: 20px;
+  border: 5px solid white;
+  border-radius:15%;
+}
+
+#home-link:hover, #add-link:hover, #gallery-link:hover {
+  color: black;
+  font-size: 20px;
+  border: 5px solid #999;
+  background-color: white;
+  border-radius:5px;
+}
+
+.wrapper {
+  position: absolute;
+  margin:0;
+  top: 175px;
+  width: 100%;
+  
+}
+
+.custom-card {
+  position:absolute;
+  margin:0;
+  
+  border: 10px solid #333;
+  border-radius: calc(20px - 5px);
+  background-color: white;
+  box-shadow: 8px -8px #777;
+}
+
+#def {
+  top: 15%;
+  left: 4%;
+}
+
+#home-card-2 {
+  right: 11%;
+  top: 85%;
+}
+
+#home-card-3 {
+  left: 7%;
+  top: 130%;
+  width: 20%;
+}
+
+
+
+#home1 {
+  position: absolute;
+  margin:0;
+  right: 4%;
+  top: 15%;
+  width: 45%;
+  height:auto;
+  border: 10px solid #333;
+  border-radius: calc(20px - 5px);
+  box-shadow: 8px -8px #777;
+}
+
+#home2 {
+  position: absolute;
+  margin:0;
+  left: 4%;
+  top: 55%;
+  width: 40%;
+  height:auto;
+  border: 10px solid #333;
+  border-radius: calc(20px - 5px);
+  box-shadow: 8px -8px #777;
+}
+
+#home3 {
+  position: absolute;
+  margin:0;
+  right: 4%;
+  top: 135%;
+  width: 60%;
+  height:auto;
+  border: 10px solid #333;
+  border-radius: calc(20px - 5px);
+  box-shadow: 8px -8px #777;
+}
+
+
