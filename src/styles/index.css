@@ -1,12 +1,18 @@
 body {
-  background-color: lightgray;
+  background-color: #ECF0F1;
   margin:0;
   padding:0;
-
+  font-family: 'Bebas Neue', cursive;
 }
 
 .navbar-custom {
   height: 75px;
+  background-color: #34495E;
+}
+
+.btn-custom {
+  background-color: #2980B9;
+  border-radius:10px;
 }
 
 #nav-title {
@@ -30,76 +36,73 @@ body {
   border-radius:5px;
 }
 
-.wrapper {
-  position: absolute;
-  margin:0;
-  top: 175px;
-  width: 100%;
-  
-}
+
 
 .custom-card {
-  position:absolute;
+  display:block;
   margin:0;
-  
-  border: 10px solid #333;
+  position:relative;
+  border: 10px solid #34495E;
   border-radius: calc(20px - 5px);
   background-color: white;
-  box-shadow: 8px -8px #777;
+  box-shadow: 4px 4px 20px black;
+  justify-content: center;
+  max-width:100%;
+  max-height:100%;
+}
+
+.detail-image {
+  width: 45%;
+  left:12.5%;
+  top: 15%
+}
+
+.car-card {
+  width:40%;
+  height:auto;
 }
 
 #def {
-  top: 15%;
-  left: 4%;
+  
+  
 }
 
 #home-card-2 {
-  right: 11%;
-  top: 85%;
+  
+  
 }
 
 #home-card-3 {
-  left: 7%;
-  top: 130%;
-  width: 20%;
+  
+  
+}
+
+.image-card {
+
+}
+
+.home-image {
+  max-width: 100%;
+  max-height:100%;
+}
+
+#home-image-card-1 {
+ 
+}
+
+#home-image-card-2 {
+  
+}
+
+#home-image-card-3 {
+  
 }
 
 
-
-#home1 {
-  position: absolute;
-  margin:0;
-  right: 4%;
-  top: 15%;
-  width: 45%;
-  height:auto;
-  border: 10px solid #333;
-  border-radius: calc(20px - 5px);
-  box-shadow: 8px -8px #777;
-}
-
-#home2 {
-  position: absolute;
-  margin:0;
-  left: 4%;
-  top: 55%;
-  width: 40%;
-  height:auto;
-  border: 10px solid #333;
-  border-radius: calc(20px - 5px);
-  box-shadow: 8px -8px #777;
-}
-
-#home3 {
-  position: absolute;
-  margin:0;
-  right: 4%;
-  top: 135%;
-  width: 60%;
-  height:auto;
-  border: 10px solid #333;
-  border-radius: calc(20px - 5px);
-  box-shadow: 8px -8px #777;
+#addForm {
+  width: 50%;
+  left:25%;
+  top:15%
 }
 
 
