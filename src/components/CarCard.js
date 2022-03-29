@@ -2,11 +2,12 @@ import React from 'react'
 
 
 function CarCard({ car, showDetail }) {
-/*
-  function handleCarClick(car){ 
+
+  function handleCarClick(){ 
+    console.log('handle car click function')
     showDetail(car)
   }
-  */
+  
 
 
   return (
@@ -21,7 +22,7 @@ function CarCard({ car, showDetail }) {
                                 <p className="card-text"> {car.info} </p>
                                 <div className='row justify-content-center' id='buttonrow'>
                                  
-                                  <button /*onClick={handleCarClick(car)}*/ className='btn-custom col-2 m-2 p-2'> See More </button>
+                                  <button onClick={handleCarClick} className='btn-custom col-2 m-2 p-2'> See More </button>
                                 </div>
                             </div>
                     </div>

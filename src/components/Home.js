@@ -4,21 +4,33 @@ import home1 from '../hard-park-photos/IMG_5168.jpg'
 import home2 from '../hard-park-photos/IMG_7082.jpg'
 import home3 from '../hard-park-photos/IMG_6356.JPG'
 
-function Home() {
+function Home({ goToCategory }) {
+
+    function goToEuro(){
+        goToCategory(1)
+    }
+
+    function goToJDM(){
+        goToCategory(2)
+    }
+
+    function goToDomestic(){
+        goToCategory(3)
+    }
+
   return (
     <div id ='homepage' className='container-fluid'>
        
         <div className='row m-2  p-2 justify-content-evenly '>
             <div className='col-5 custom-card card  align-self-center' >
                 <div id='def' className=' m-2 p-2 col'>
-                    <h1 className='m-2 p-2'>HARD PARK</h1>
-                    <h3 className='text-muted m-2 p-2'>[hahrd-pahrk]</h3>
-                    <h4 className='m-2 p-2'> VERB </h4>
-                    <h5> The act of only ever parking a built car instead of using it at the track. </h5>
-                    <h5> Typically used in a negative context to put down others.</h5>
+                    <h1 id='card-1-h1' className='m-2 p-2 underline-text'>HARD PARK</h1>
+                    <h3 id='card-1-h3'className='text-muted m-2 p-2'> A CAR MEET FOR THE INTERNET</h3>
+                    <h4 className='m-2 p-2'>  </h4>
+                    <h5> </h5>
+                    <h5> </h5>
                     <h6 className='text-muted'>
-                         Ex: 'Isn't it weird that they spent all that money building their car but they're never at the track?' <br />
-                         'Yeah, hard parking is so lame'
+                        
                     </h6>
                     
                 </div>
@@ -37,19 +49,16 @@ function Home() {
             
             <div className='col-5 align-self-center custom-card'>
                 <div className=' m-2 p-2 col' id='home-card-2'>
-                    <h3 className='m-2 p-2 underline-text'>
-                        HARD PARK is a car meet for the internet
-                    </h3>
-                    <h5 className='m-2 p-2'>
+                    
+                    <h3 className='m-2 p-2'>
                         Park your car, check out others
-                    </h5>
-                    <p className='m-2 p-2 text-muted'>
-                        Stance, Track, Euro, JDM, Muscle, Drift, Classic, Kit, Resto-mod, <br />
-                        Donks, Low-riders, Motorcycles, Trucks, 4x4's etc
-                    </p>
-                    <h5 className='m-2 p-2'> We don't care what you <span className='highlight-span'><em>drive,</em></span> or what you <span className='highlight-span'><em>do</em></span> &nbsp;with it</h5>
-                    <h5 className='m-2 p-2 text-muted underline-text'> Park, Drive, Slide, Send.</h5>
-                    <h6> Check out the lot and add your car </h6>
+                    </h3>
+                    <h4 className='m-2 p-2 text-muted'>
+                        Euro, JDM, Domestic
+                    </h4>
+                    <h5 className='m-2 p-2 '> <span className='highlight-span'>It doesn't matter what you drive, or what you do with it</span></h5>
+                    
+                    
                 </div>
             </div>
 
@@ -61,21 +70,16 @@ function Home() {
                 <div className='m-2 p-2 custom-card' id='home-card-3'>
                     <h1 className='underline-text'> Choose a category </h1>
                     <div  id='button-group' className='btn-group-vertical btn-group-lg co-4' role='group'>
-                        <button type='button' className='btn-custom m-2 p-2'>
+                        <button type='button' onClick={goToEuro} className='btn-custom m-2 p-2'>
                             Euro
                         </button>
-                        <button type='button' className='btn-custom m-2 p-2'>
+                        <button type='button' onClick={goToJDM} className='btn-custom m-2 p-2'>
                             JDM
                         </button>
-                        <button type='button' className='btn-custom m-2 p-2'>
+                        <button type='button' onClick={goToDomestic} className='btn-custom m-2 p-2'>
                             Domestic
                         </button>
-                        <button type='button' className='btn-custom m-2 p-2'>
-                            Trucks
-                        </button>
-                        <button type='button' className='btn-custom m-2 p-2'>
-                            4x4's
-                        </button>
+                       
                     </div>
                 </div>
             </div>
