@@ -3,7 +3,7 @@ import React from 'react'
 function AddCarPage() {
   return (
     <div>
-        <form className='custom-card' id='addForm'>
+        <form className='custom-card m-4 p-3 row' id='addForm'>
         
         <div class="m-2 p-2">
             <label htmlFor="makeInput" className="form-label">Image URL</label>

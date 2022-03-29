@@ -1,5 +1,6 @@
 import {Switch, Route} from "react-router-dom"
 import {useHistory} from "react-router-dom";
+import { useState, useEffect } from 'react'
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Lot from './components/Lot';
@@ -10,6 +11,37 @@ import './styles/App.css';
 function App() {
 
   const history = useHistory();
+
+  const [lot, setLot] = useState([])
+  const [detail, setDetail] = useState({})
+  
+
+  useEffect(()=> {
+    fetch('http://localhost:9292/cars')
+    .then((resp) => resp.json())
+    .then(setLot)
+  }, [])
+
+  
+/*
+  function deleteCar(car){
+    fetch(`http://localhost:9292/delete/${car.id}`, {
+      method: 'DELETE',
+    })
+    .then( res => res.json())
+    .then(setLot)
+  }
+*/
+  function showDetail(car) {
+    fetch(`http://localhost:9292/cars/${car.id}`)
+    .then((resp) => resp.json())
+    .then(setDetail)
+    
+    
+    history.push('/detailpage')
+  }
+  
+
 
   function goHome(){
     history.push('/home')
@@ -25,7 +57,7 @@ function App() {
       <Switch>
         
         <Route exact path='/lot'>
-          <Lot />
+          <Lot lot={lot} showDetail={showDetail}/>
         </Route>
 
         <Route exact path='/park'>
@@ -33,7 +65,7 @@ function App() {
         </Route>
 
         <Route exact path='/detailpage'>
-          <DetailPage />
+          <DetailPage car={detail} /*deleteCar={deleteCar}*/ />
         </Route>
 
         <Route path='/'>

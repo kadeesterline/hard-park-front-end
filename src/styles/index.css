@@ -5,19 +5,58 @@ body {
   font-family: 'Bebas Neue', cursive;
 }
 
+.underline-text {
+  text-decoration: underline  #999;
+}
+
+.highlight-span {
+  
+  color: #0a6bff;
+  
+}
+
 .navbar-custom {
-  height: 75px;
+  height: 135px;
   background-color: #34495E;
 }
 
 .btn-custom {
-  background-color: #2980B9;
-  border-radius:10px;
+  background-color: #0a6bff;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: rgba(1,60,136,.5) 0 -1px 3px 0 inset,rgba(0,44,97,.1) 0 3px 6px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  min-height: 56px;
+  min-width: 120px;
+  position: relative;
+  text-align: center;
+  transition: all .2s cubic-bezier(.22, .61, .36, 1);
+  display:inline-flex;
+  align-items:center;
+  justify-content: center;
 }
 
+.btn-custom:hover {
+  background-color: #065dd8;
+  transform: translateY(-2px);
+}
+
+#button-group {
+  display: inline;
+}
+
+
+
 #nav-title {
-  color: white;
-  font-size: 70px;
+  color: #ECF0F1;
+  font-size: 75px;
+  text-decoration: underline  #999;
+  text-shadow: 2px 1px 0 #999;
   
 }
 
@@ -42,10 +81,10 @@ body {
   display:block;
   margin:0;
   position:relative;
-  border: 10px solid #34495E;
+  
   border-radius: calc(20px - 5px);
   background-color: white;
-  box-shadow: 4px 4px 20px black;
+  
   justify-content: center;
   max-width:100%;
   max-height:100%;
@@ -54,12 +93,14 @@ body {
 .detail-image {
   width: 45%;
   left:12.5%;
-  top: 15%
+  top: 15%;
+  
 }
 
 .car-card {
   width:40%;
   height:auto;
+  border-radius: calc(20px - 5px);
 }
 
 #def {
@@ -78,12 +119,14 @@ body {
 }
 
 .image-card {
-
+  
 }
 
 .home-image {
   max-width: 100%;
   max-height:100%;
+  border-radius: calc(20px - 5px);
+  box-shadow: 4px 4px 20px white;
 }
 
 #home-image-card-1 {

@@ -37,7 +37,7 @@ function Home() {
             
             <div className='col-5 align-self-center custom-card'>
                 <div className=' m-2 p-2 col' id='home-card-2'>
-                    <h3 className='m-2 p-2'>
+                    <h3 className='m-2 p-2 underline-text'>
                         HARD PARK is a car meet for the internet
                     </h3>
                     <h5 className='m-2 p-2'>
@@ -47,9 +47,9 @@ function Home() {
                         Stance, Track, Euro, JDM, Muscle, Drift, Classic, Kit, Resto-mod, <br />
                         Donks, Low-riders, Motorcycles, Trucks, 4x4's etc
                     </p>
-                    <h5 className='m-2 p-2'> We don't care what you drive, or what you do with it</h5>
-                    <h5 className='m-2 p-2 text-muted'> Park, Drive, Slide, Send.</h5>
-                    <h6 > Check out the lot and add your car </h6>
+                    <h5 className='m-2 p-2'> We don't care what you <span className='highlight-span'><em>drive,</em></span> or what you <span className='highlight-span'><em>do</em></span> &nbsp;with it</h5>
+                    <h5 className='m-2 p-2 text-muted underline-text'> Park, Drive, Slide, Send.</h5>
+                    <h6> Check out the lot and add your car </h6>
                 </div>
             </div>
 
@@ -59,8 +59,8 @@ function Home() {
             
             <div className='col-5 align-self-center'>
                 <div className='m-2 p-2 custom-card' id='home-card-3'>
-                    <h1> Choose a category </h1>
-                    <div className='btn-group-vertical btn-group-lg co-4' role='group'>
+                    <h1 className='underline-text'> Choose a category </h1>
+                    <div  id='button-group' className='btn-group-vertical btn-group-lg co-4' role='group'>
                         <button type='button' className='btn-custom m-2 p-2'>
                             Euro
                         </button>
