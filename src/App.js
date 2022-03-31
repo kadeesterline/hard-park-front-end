@@ -14,6 +14,7 @@ function App() {
 
   const [lot, setLot] = useState([])
   const [detail, setDetail] = useState({})
+  const [isFiltered, setIsFiltered] = useState(false)
  
   
   const initialFormState = {
@@ -27,9 +28,16 @@ function App() {
   }
   const [formState, setFormState] = useState(initialFormState)
 
+  const initialCommentState = {
+    user_name: '',
+    content: '',
+    car_id: 0
+  }
+  const [commentBoxState, setCommentBoxState] = useState(initialCommentState)
+
   useEffect(()=> {
     getLot()
-    console.log('fetching data')
+    
   },[]);
 
 
@@ -42,7 +50,7 @@ function App() {
   
 
   function deleteCar(carToDelete){
-    console.log('delete car function')
+    
     //const newLot = lot.filter((car) => car !== carToDelete)
     
     fetch(`http://localhost:9292/delete/${carToDelete.id}`, {
@@ -56,26 +64,27 @@ function App() {
   }
 
   function showDetail(car) {
-    console.log('show detail function')
+    
     history.push('/detailpage')
     fetch(`http://localhost:9292/cars/${car.id}`)
     .then((resp) => resp.json())
-    .then(setDetail)
-    
-    
+    .then(resp => setDetail(resp))
     
   }
 
-  const handleChange = (event) => {
+  const handleFormChange = (event) => {
     const {name, value} = event.target;
     setFormState(formState => ({...formState, [name]: value}))
   }
 
+  const handleCommentBoxChange = (event) => {
+    const {name, value} = event.target;
+    setCommentBoxState(commentBoxState => ({...commentBoxState, [name]: value}))
+  }
+
   function handleSubmit(event){
-    
-    
     event.preventDefault()
-    console.log('handle submit function')
+    
     if (formState.image === '') {
       alert('Please enter an image URL')
     }
@@ -94,7 +103,12 @@ function App() {
     else if (formState.info === '') {
       alert('Please give some info on your car')
     }
+    else if (formState.category === 'none') {
+      alert('Please choose a category')
+      
+    }
     else {
+      
       fetch('http://localhost:9292/addcar', {
         method: 'POST',
         headers: {
@@ -102,16 +116,40 @@ function App() {
         },
         body: JSON.stringify(formState),
       })
-      .then(console.log(formState))
-      .then(setLot([...lot, formState]))
+      .then(getLot())
       .then(setFormState(initialFormState))
       .then(history.push('/lot'))
       
     }
   }
 
+  function handleNewComment(event){
+    event.preventDefault()
+    
+    if (commentBoxState.content === '') {
+      alert('Comments must contain text!')
+    }
+    else if (commentBoxState.user_name === '') {
+      alert('Please provide a username')
+    }
+    else {
+      fetch(`http://localhost:9292/car/addcomment/${detail.id}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(commentBoxState),
+      })
+      .then(getLot())
+      .then(setDetail(detail))
+      .then(showDetail(detail))
+      .then(setCommentBoxState(initialCommentState))
+    }
+  }
+
   function goToCategory(category){
-    console.log(`going to ${category}`)
+    
+    setIsFiltered(true)
     fetch(`http://localhost:9292/category/${category}`)
     .then(resp => resp.json())
     .then(resp => setLot(resp.cars))
@@ -122,6 +160,7 @@ function App() {
 
   function clearFilter(){
     getLot()
+    setIsFiltered(false)
     history.push('/lot')
   }
 
@@ -138,15 +177,36 @@ function App() {
       <Switch>
         
         <Route exact path='/lot'>
-          <Lot lot={lot} showDetail={showDetail} clearFilter={clearFilter} goToCategory={goToCategory}/>
+          <Lot 
+            lot={lot} 
+            showDetail={showDetail} 
+            clearFilter={clearFilter} 
+            goToCategory={goToCategory} 
+            handleSubmit={handleSubmit} 
+            handleChange={handleFormChange} 
+            formState={formState}
+            isFiltered={isFiltered}
+            
+            />
         </Route>
 
         <Route exact path='/park'>
-        <AddCarPage handleSubmit={handleSubmit} handleChange={handleChange} formState={formState} />
+        <AddCarPage 
+          handleSubmit={handleSubmit} 
+          handleChange={handleFormChange} 
+          formState={formState} 
+          />
         </Route>
 
         <Route exact path='/detailpage'>
-          <DetailPage car={detail} deleteCar={deleteCar} />
+          <DetailPage 
+            car={detail} 
+            deleteCar={deleteCar} 
+            handleNewComment={handleNewComment} 
+            commentBoxState={commentBoxState} 
+            setCommentBoxState={setCommentBoxState}
+            handleCommentBoxChange={handleCommentBoxChange}
+            />
         </Route>
 
         <Route path='/'>

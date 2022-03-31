@@ -4,7 +4,7 @@ import React from 'react'
 function CarCard({ car, showDetail }) {
 
   function handleCarClick(){ 
-    console.log('handle car click function')
+    
     showDetail(car)
   }
   

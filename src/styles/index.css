@@ -3,38 +3,47 @@ body {
   margin:0;
   padding:0;
   font-family: 'Bebas Neue', cursive;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display:none;
 }
 
 .underline-text {
-  text-decoration: underline  #999;
+  text-decoration: underline  #1B7FE3;
 }
 
-.highlight-span {
-  
+.highlight-text {
   color: #0a6bff;
-  
 }
 
 .navbar-custom {
-  height: 135px;
-  background-color: #34495E;
+  height: 115px;
+  background-color: #cdd2d7;
+  
+}
+
+#navbar-logo {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 3px solid #34495E;
 }
 
 .btn-custom {
-  background-color: #0a6bff;
+  background-color: #34495E;
   border-radius: 4px;
   border: 0;
   box-shadow: rgba(1,60,136,.5) 0 -1px 3px 0 inset,rgba(0,44,97,.1) 0 3px 6px 0;
   box-sizing: border-box;
   color: white;
-  cursor: pointer;
   font-size: 18px;
   font-weight: 700;
   margin: 0;
   min-height: 56px;
   min-width: 120px;
   position: relative;
-  text-align: center;
   transition: all .2s cubic-bezier(.22, .61, .36, 1);
   display:inline-flex;
   align-items:center;
@@ -42,7 +51,8 @@ body {
 }
 
 .btn-custom:hover {
-  background-color: #065dd8;
+  color:white;
+  background-color: #1B7FE3;
   transform: translateY(-2px);
 }
 
@@ -50,18 +60,35 @@ body {
   display: inline;
 }
 
+.nav-title {
+  color: #34495E;
+  font-size: 40px;
+  margin:0 auto;
+  border-radius: 10px;
+  padding:0;
+}
 
+#navbar-title-top {
+  margin:0;
+}
 
-#nav-title {
-  color: #ECF0F1;
-  font-size: 75px;
-  text-decoration: underline  #999;
-  text-shadow: 2px 1px 0 #999;
-  
+#navbar-title-bottom {
+  margin:0;
+}
+
+#navbar-hr {
+  margin:0;
+  padding:0;
+  background-color: #0a6bff;
+  height: 5px;
+  width: 50%;
+  left:33%;
+  opacity: 1;
 }
 
 #card-1-h1 {
   font-size:125px;
+  color: #34495E;
 }
 #card-1-h3 {
   font-size:50px;
@@ -82,51 +109,29 @@ body {
   border-radius:5px;
 }
 
-
-
 .custom-card {
   display:block;
   margin:0;
   position:relative;
-  
+  border: 3px solid #34495E;
   border-radius: calc(20px - 5px);
   background-color: white;
-  
   justify-content: center;
   max-width:100%;
   max-height:100%;
 }
 
 .detail-image {
-  width: 45%;
+  width:35%;
+  height:35%;
   left:12.5%;
   top: 15%;
-  
 }
 
 .car-card {
   width:40%;
   height:auto;
   border-radius: calc(20px - 5px);
-}
-
-#def {
-  
-  
-}
-
-#home-card-2 {
-  
-  
-}
-
-#home-card-3 {
-  
-  
-}
-
-.image-card {
-  
 }
 
 .home-image {
@@ -136,23 +141,60 @@ body {
   box-shadow: 4px 4px 20px white;
 }
 
-#home-image-card-1 {
- 
-}
-
-#home-image-card-2 {
-  
-}
-
-#home-image-card-3 {
-  
+.home-card {
+  display:block;
+  margin:0;
+  position:relative;
+  border-radius: calc(20px - 5px);
+  background-color: white;
+  justify-content: center;
+  max-width:100%;
+  max-height:100%;
 }
 
 
 #addForm {
-  width: 50%;
-  left:25%;
   top:15%
 }
 
+.hide {
+  display:none;
+  height:0;
+  width:0;
+}
 
+#lothr {
+  left:33%;
+  width:33%;
+  height: 8px;
+  background-color: #1B7FE3;
+  opacity: 1;
+}
+
+.detail-title {
+  font-size: 45px;
+}
+
+.detail-body {
+  font-size: 20px;
+}
+
+.remove-button {
+  position:absolute;
+}
+
+.small-button {
+  width: 25px;
+}
+
+.small-button:hover {
+  transform: translateY(-2px);
+}
+
+.comment-border {
+  border: 3px solid #34495E;
+}
+
+.to-top {
+  text-decoration: none;
+}
