@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# Hard Park
+This repo is only the front end of the project, you can find the sinatra backend [here](https://github.com/kadeesterline/phase-3-sinatra-react-project)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+After cloning down both repos run the following commands from within the directory for this project: <br />
+<code> npm install && npm start </code><br />
+
+Instructions for starting the Sinatra backend can be found in that repo's README.
+
+# About
+Hard Park is a car meet for the internet where users can add pictures of their cars and interact with other users through comments and likes. Starting with the landing page, users are able to scroll down and jump to filtered sections of the lot immediately, there is a currently a sign up form at the bottom as well. There is no User model in the backend yet, making the sign up form a future to do and not a working feature yet. 
+
+After clicking on the lot users can scroll through all of the cars added as well as filter through them and add their own car. 
+
+Lastly for now is the form to add your own car to the database, until there is a user model users will need to provide an instagram username for the post. This is just a placeholder for now with the goal being to have a users chosen username shown instead of their instagram.
+
+
+
+## Contributors
+Kade Esterline: [LinkedIn](https://www.linkedin.com/in/kade-esterline/), [Dev.to](https://dev.to/kadeesterline) <br />
+
+/github/followers/:user?label=Follow 
+
+## Contributing
+Currently this is a personal project with no plans of allowing others to contribute.
+
+
+
 
 ## Available Scripts
 
@@ -39,32 +63,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

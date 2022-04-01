@@ -3,10 +3,11 @@ import React from 'react'
 function Form( {handleSubmit, handleChange, formState} ) {
   
     return (
-        <div className='col'>
+        <div className='col m-2 p-2'>
     <form className=' custom-card m-4 p-3 row ' autoComplete='off' id='addForm' onSubmit={handleSubmit}>
         
-        <div className="m-1 row">
+        <div className=" row justify-content-center">
+            <div className='col'>
             <label htmlFor="makeInput" className="form-label">Image</label>
             <input 
                 type="text" 
@@ -18,10 +19,11 @@ function Form( {handleSubmit, handleChange, formState} ) {
                 onChange={handleChange}
                 name='image'
                 /> 
+                </div>
         </div>
         
         <div className='row justify-content-evenly '>
-            <div className=" m-2 p-2 col-2">
+            <div className=" m-2 p-2 col-3">
                 <label htmlFor="makeInput" className="form-label">Make</label>
                 <input 
                     type="text" 
@@ -34,7 +36,7 @@ function Form( {handleSubmit, handleChange, formState} ) {
                     /> 
             </div>
             
-            <div className="m-2 p-2 col-2">
+            <div className="m-2 p-2 col-3">
                 <label htmlFor="modelInput" className="form-label">Model</label>
                 <input 
                     type="text" 
@@ -47,7 +49,7 @@ function Form( {handleSubmit, handleChange, formState} ) {
                     /> 
             </div>
             
-            <div className="m-2 p-2 col-2">
+            <div className="m-2 p-2 col-3">
                 <label htmlFor="modelInput" className="form-label">Year</label>
                 <input 
                     type="number" 
@@ -60,7 +62,12 @@ function Form( {handleSubmit, handleChange, formState} ) {
                     /> 
             </div>
 
-            <div className='m-2 p-2 col-2'>
+          
+
+        </div>
+
+    <div className='row justify-content-evenly'>
+        <div className='m-2 p-2 col-5'>
                 <label htmlFor='categoryInput' className='form-label'>Category</label>
                 <select
                     className='form-control'
@@ -76,9 +83,7 @@ function Form( {handleSubmit, handleChange, formState} ) {
                 </select>
             </div>
 
-        </div>
-
-        <div className="m-2 p-2 col">
+        <div className="m-2 p-2 col-5">
             <label htmlFor="modelInput" className="form-label">Instagram</label>
             <input 
                 type="text" 
@@ -90,8 +95,11 @@ function Form( {handleSubmit, handleChange, formState} ) {
                 name='instagram'
                 /> 
         </div>
+    </div>
 
-        <div className="m-2 p-2 col">
+        <div className='row'>
+
+        <div className="  col">
             <label htmlFor="modelInput" className="form-label">About</label>
             <textarea  
                 className="form-control" 
@@ -102,10 +110,15 @@ function Form( {handleSubmit, handleChange, formState} ) {
                 name='info'
                 /> 
         </div>
+
+        </div>
         
+        <div className='row'>
         <div className='col justify-content-center'>
             <button type='submit' className='m-2 p-2 btn-custom col-1'> Park Car </button>
         </div>
+        </div>
+
         </form>
         </div>
   )

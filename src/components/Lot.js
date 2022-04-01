@@ -51,9 +51,7 @@ function handleShowFilters(){
                 {showFilters ? 'hide filters' : 'show filters' }
               </button>
               
-              <button type='button' onClick={handleShowForm} className={showFilters ? 'hide' : 'btn-custom m-2 p-2 col-2'}>
-                add your car
-              </button>
+              
               </div>
 
 

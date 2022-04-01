@@ -5,7 +5,7 @@ function CommentBox({ handleNewComment, commentBoxState, setCommentBoxState, han
   
   
   return (
-    <div className='custom-card m-2 p-2 comment-border'>
+    <div className='custom-card m-5 p-2 '>
         <form autoComplete='off' onSubmit={handleNewComment}>
             <label htmlFor='userInput' className='form-label'>
                 User

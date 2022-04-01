@@ -26,9 +26,9 @@ body::-webkit-scrollbar {
 }
 
 #navbar-logo {
-  background-color: #fff;
+  max-width: 10%;
   border-radius: 10px;
-  border: 3px solid #34495E;
+  background-color: #fff;
 }
 
 .btn-custom {
@@ -94,26 +94,11 @@ body::-webkit-scrollbar {
   font-size:50px;
 }
 
-#home-link, #add-link, #gallery-link {
-  color: white;
-  font-size: 20px;
-  border: 5px solid white;
-  border-radius:15%;
-}
-
-#home-link:hover, #add-link:hover, #gallery-link:hover {
-  color: black;
-  font-size: 20px;
-  border: 5px solid #999;
-  background-color: white;
-  border-radius:5px;
-}
-
 .custom-card {
   display:block;
   margin:0;
   position:relative;
-  border: 3px solid #34495E;
+  
   border-radius: calc(20px - 5px);
   background-color: white;
   justify-content: center;
@@ -132,6 +117,7 @@ body::-webkit-scrollbar {
   width:40%;
   height:auto;
   border-radius: calc(20px - 5px);
+  
 }
 
 .home-image {

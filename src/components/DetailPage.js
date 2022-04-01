@@ -43,7 +43,7 @@ function DetailPage( { car, deleteCar, commentBoxState, setCommentBoxState, hand
         <div className='col-6 m-2 p-2 '>
             
             <div className='custom-card'>
-              <h4 className='detail-title m-2 p-2'> {car.year} {car.make} {car.model} </h4>
+              <h4 className='detail-title underline-text m-2 p-2'> {car.year} {car.make} {car.model} </h4>
               
               <h6 className='text-muted p-2'>@{car.instagram}</h6>
               <p className='detail-body m-2 p-2'>
