@@ -7,18 +7,18 @@ After cloning down both repos run the following commands from within the directo
 Instructions for starting the Sinatra backend can be found in that repo's README.
 
 # About
-Hard Park is a car meet for the internet where users can add pictures of their cars and interact with other users through comments and likes. Starting with the landing page, users are able to scroll down and jump to filtered sections of the lot immediately, there is a currently a sign up form at the bottom as well. There is no User model in the backend yet, making the sign up form a future to do and not a working feature yet. 
-
-After clicking on the lot users can scroll through all of the cars added as well as filter through them and add their own car. 
-
-Lastly for now is the form to add your own car to the database, until there is a user model users will need to provide an instagram username for the post. This is just a placeholder for now with the goal being to have a users chosen username shown instead of their instagram.
-
+Hard Park is a car meet for the internet where users can add pictures of their cars and interact with other users through comments and likes. Starting with the landing page, users are able to scroll down and jump to filtered sections of the lot immediately, there is a currently a sign up form at the bottom as well. There is no User model in the backend yet, making the sign up form a future to do and not a working feature yet. <br />
+![home page](./readme-photos/Screen%20Shot%202022-04-01%20at%208.40.57%20AM.png)
+After clicking on the lot users can scroll through all of the cars added as well as filter through them and add their own car. <br />
+![lot](./readme-photos/Screen%20Shot%202022-04-01%20at%208.41.24%20AM.png)
+Lastly for now is the form to add your own car to the database, until there is a user model users will need to provide an instagram username for the post. This is just a placeholder for now with the goal being to have a users chosen username shown instead of their instagram.<br />
+![park page](./readme-photos/Screen%20Shot%202022-04-01%20at%208.41.44%20AM.png)
 
 
 ## Contributors
 Kade Esterline: [LinkedIn](https://www.linkedin.com/in/kade-esterline/), [Dev.to](https://dev.to/kadeesterline) <br />
 
-/github/followers/:user?label=Follow 
+
 
 ## Contributing
 Currently this is a personal project with no plans of allowing others to contribute.
